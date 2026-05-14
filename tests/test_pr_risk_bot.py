@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from bgi.mcp.context import ArchitectureContextService, cluster_id_from_rep
 from scripts.pr_architecture_risk_bot import (
