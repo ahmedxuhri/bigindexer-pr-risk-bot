@@ -326,11 +326,23 @@ def main() -> None:
 
     comment_url = ""
     if _parse_bool(args.post_comment) and pr_number:
+        if not os.environ.get("GITHUB_TOKEN", "").strip():
+            print(
+                "[BGI] Warning: post-comment=true but no GitHub token is available. "
+                "Skipping PR comment; step summary will still be generated.",
+                file=sys.stderr,
+            )
         comment_url = upsert_pr_comment(
             token=os.environ.get("GITHUB_TOKEN", ""),
             repository=os.environ.get("GITHUB_REPOSITORY", ""),
             pr_number=pr_number,
             body=markdown,
+        )
+    elif _parse_bool(args.post_comment) and not pr_number:
+        print(
+            "[BGI] Warning: post-comment=true but this event has no pull request context. "
+            "Skipping PR comment; step summary will still be generated.",
+            file=sys.stderr,
         )
 
     output_json = Path(args.output_json)

@@ -6,7 +6,7 @@ branding:
 
 inputs:
   github-token:
-    description: "GitHub token used to create/update PR comments"
+    description: "GitHub token used to create/update PR comments (defaults to github.token)"
     required: false
     default: ""
   scan-path:
@@ -102,7 +102,7 @@ runs:
       id: risk
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ inputs.github-token }}
+        GITHUB_TOKEN: ${{ inputs.github-token || github.token }}
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_EVENT_PATH: ${{ github.event_path }}
       run: |
