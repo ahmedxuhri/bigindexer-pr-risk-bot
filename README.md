@@ -97,4 +97,4 @@ steps:
 
 ## Compatibility
 
-Tested against `bigindexer==0.1.3`.
+Tested against `bigindexer>=0.1.2,<0.2`.
