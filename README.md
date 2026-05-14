@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: ahmedxuhri/bigindexer-pr-risk-bot@v0.1.0
+      - uses: ahmedxuhri/bigindexer-pr-risk-bot@v0.1.1
         with:
           # optional; action already falls back to github.token
           github-token: ${{ github.token }}
@@ -83,7 +83,7 @@ permissions:
 
 steps:
   - uses: actions/checkout@v4
-  - uses: ahmedxuhri/bigindexer-pr-risk-bot@v0.1.0
+  - uses: ahmedxuhri/bigindexer-pr-risk-bot@v0.1.1
     with:
       github-token: ${{ github.token }}
       task-prompt: "Review this PR for architecture risk."
