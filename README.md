@@ -1,4 +1,4 @@
-# BGI PR Architecture Risk Bot
+# Big Indexer PR Risk Bot
 
 GitHub Marketplace Action for architecture-aware PR review.
 

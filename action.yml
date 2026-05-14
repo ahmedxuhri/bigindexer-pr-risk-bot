@@ -1,4 +1,4 @@
-name: "BGI PR Architecture Risk Bot"
+name: "Big Indexer PR Risk Bot"
 description: "Scan a PR, compute architecture risk, and post/update a structured PR comment."
 branding:
   icon: "shield"
