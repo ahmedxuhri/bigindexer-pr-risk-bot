@@ -1,6 +1,12 @@
 # Big Indexer PR Risk Bot
 
+[![Latest Release](https://img.shields.io/github/v/release/ahmedxuhri/bigindexer-pr-risk-bot)](https://github.com/ahmedxuhri/bigindexer-pr-risk-bot/releases)
+[![CI](https://github.com/ahmedxuhri/bigindexer-pr-risk-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmedxuhri/bigindexer-pr-risk-bot/actions/workflows/ci.yml)
+
 GitHub Marketplace Action for architecture-aware PR review.
+
+Part of the Big Indexer ecosystem. Main project:
+https://github.com/ahmedxuhri/bigindexer
 
 It scans the repo, builds `bgi-graph.json` and `fuse-graph.json`, then comments on the pull request with:
 
